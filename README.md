@@ -14,7 +14,7 @@ If you want to use the material here in your games you are free to do so. We do,
 you send our artist Zoderian a thank you message over Discord, she can be found on the Drakkenheim
 server.
 
-Want to contribute with something that's missing here? Create a merge request, or send me a message
+Want to contribute with something that's missing here? Create a pull request, or send me a message
 on discord.
 
 ## What will not be found here?
