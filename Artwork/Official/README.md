@@ -8,7 +8,7 @@ you should hopefully have a collection of everything you want in order to make t
 screens in your VTT of choice. It should hopefully be useful for you at an actual table as well.
 
 Note that this script is built so that one can easily add parts, sacrificing efficiency to do so.
-I'm also an embedded systems developer, not a python engineer, feel free to submit pull requests if
+I'm also an embedded systems engineer, not a python developer, feel free to submit pull requests if
 you can improve it while maintaining the simplicity of the image table.
 
 ## Requirements

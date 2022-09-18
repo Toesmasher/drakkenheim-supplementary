@@ -9,8 +9,6 @@ import subprocess
 # Parse and validate arguments
 parser = argparse.ArgumentParser("Drakkenheim Art Extractor")
 parser.add_argument("--pdf", type = str, required = True, help = "Path to the Drakkenheim PDF")
-parser.add_argument("--type", type = str, required = False, help = "Type of image to create",
-                    choices=["png", "jpg"], default="png")
 args = parser.parse_args()
 
 SCRIPTPATH = os.path.realpath(__file__)
@@ -139,7 +137,7 @@ images = [
 ]
 
 tmpname = "/tmp/drakkenheim"
-tool_pdfimages_imgtype = "-j" if args.type == "jpg" else "-png"
+tool_pdfimages_imgtype = "-png"
 for i in images:
     name = i[0]
     dir = i[1]
@@ -148,9 +146,9 @@ for i in images:
     masked = i[4]
 
     dirname = os.path.join(SCRIPTDIR, dir)
-    finalname = os.path.join(dirname, "%s.%s" % (name, args.type))
-    imagename = os.path.join(SCRIPTDIR, "%s-%03i.%s" % (tmpname, image, args.type))
-    maskname = os.path.join(SCRIPTDIR, "%s-%03i.%s" % (tmpname, image + 1, args.type))
+    finalname = os.path.join(dirname, "%s.png" % (name))
+    imagename = os.path.join(SCRIPTDIR, "%s-%03i.png" % (tmpname, image))
+    maskname = os.path.join(SCRIPTDIR, "%s-%03i.png" % (tmpname, image + 1))
 
     if not os.path.isdir(dirname):
         print("Creating directory %s" % dir)
