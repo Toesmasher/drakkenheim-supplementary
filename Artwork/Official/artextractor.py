@@ -39,6 +39,7 @@ images = [
     [ "AA-River", type_humanoids, 31, 9, True],
 
     [ "FF-LucretiaMathias", type_humanoids, 34, 17, True ],
+    [ "FF-LucretiaMathias2", type_humanoids, 220, 1, True ],
     [ "FF-NathanielFlint", type_humanoids, 36, 4, True ],
     [ "FF-NathanielFlint2", type_humanoids, 96, 12, True ],
 
@@ -158,6 +159,10 @@ for i in images:
     print("%s: Extracting from page %i... " % (name, page), end = '', flush = True)
     subprocess.call([ tool_pdfimages, tool_pdfimages_imgtype, "-f", str(page), "-l", str(page),
                       args.pdf, tmpname ])
+
+    if image == -1:
+        print("Aborting")
+        exit(0)
 
     if masked:
         print("Masking and finalizing...")
